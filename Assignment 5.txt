@@ -1,0 +1,11 @@
+Q-1. Write an SQL query to print details of workers excluding first names, “Vipul” and “Satish” from Worker table.
+Select * from Worker
+Where  First_NAME not in (“Vipul”,”Satish”)
+
+Q-2. Write an SQL query to print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
+Select * from Worker where First_name like “%h” and len(First_name)=6;
+
+Q-3. Write a query to validate Email of Employee.
+Select * from worker where email regexp “\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b”
+
+

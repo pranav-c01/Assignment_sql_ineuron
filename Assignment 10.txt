@@ -1,0 +1,9 @@
+Q-19. Write an SQL query to determine the 5th highest salary without using TOP or limit method.
+select min(salary) from (select * from tablename
+order by salary desc
+limit 5)
+
+Q-20. Write an SQL query to fetch the list of employees with the same salary.
+select count(*),group_concat(first_name) from workers
+group by salary
+

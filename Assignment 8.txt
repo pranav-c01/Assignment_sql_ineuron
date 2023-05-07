@@ -1,0 +1,10 @@
+Q-15. Write an SQL query to fetch intersecting records of two tables.
+Select match_col1,match_col2,..
+From table1
+Intersect
+Select match_col1,match_col2,..
+From table2
+
+Q-16. Write an SQL query to show records from one table that another table does not have.
+Select * from Table1
+Where not exists( select * from table2 where table1. common_col_name = table2. common_col_name)
